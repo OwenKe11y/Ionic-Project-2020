@@ -1,0 +1,36 @@
+<!-- App Header -->
+<ion-header>
+  <ion-toolbar>
+ <!--Back button for the header, navigates to Home-->    
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Health News </ion-title>
+    <ion-searchbar slot="end" style="width: 40%; margin-right: 50px;" [(ngModel)]="searchBar" (change)="searchTitle()">
+    </ion-searchbar>
+    
+  </ion-toolbar>
+</ion-header>
+
+<!-- Title Image-->
+<ion-content>
+  <div class = "parallax">
+  </div>
+
+<!-- Display articles, shows data taken from the API -->
+  <ion-card *ngFor="let news of NewsData" class="articles">
+    <ion-card-header>
+      <!-- When image is clicked, take you to the url the article is referencing -->
+      <img src="{{news.urlToImage}}" (click)="webPage(news.url)">
+      <ion-card-subtitle>
+        {{news.author}}
+      </ion-card-subtitle>
+      <ion-card-title>
+        {{news.title}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{news.description}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

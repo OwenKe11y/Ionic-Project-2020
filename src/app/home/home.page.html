@@ -1,0 +1,77 @@
+
+<!--Tool Bar on top of screen-->
+
+<ion-toolbar>
+ 
+  <ion-buttons slot="primary">
+    <ion-item style="font-family:Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; ">
+      Welcome {{getName}}
+    <ion-button [routerLink]="['/login']">
+      <ion-icon slot="icon-only" name="log-in"></ion-icon>
+    </ion-button>
+  </ion-item>
+  </ion-buttons>
+  <div >
+  <img src="./assets/images/title.png" style="margin-left: 20px;">
+  </div>
+</ion-toolbar>
+
+
+
+<ion-content [fullscreen]="true">
+<!-- Display articles, shows data taken from the API -->
+<div class="parallax"></div>
+<ion-grid>
+  <ion-row>
+    <ion-col size="12" size-sm>
+      <div>
+      <img src="./assets/images/select.png" style=" margin: 10px auto 20px;">
+    </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid>
+  <ion-row>
+    <ion-col size="12" size-sm>
+<ion-card [routerLink]="['/news']">
+        <ion-card-header>
+          <!-- When image is clicked, take you to the url the article is referencing -->
+          <img class = "selectCard" src="./assets/images/selectHealth.jpg" height="650px" width="550px">
+        </ion-card-header>
+       
+      </ion-card>
+    </ion-col>
+    <ion-col size="12" size-sm>
+      <ion-card [routerLink]="['/sports']">
+        <ion-card-header>
+          <!-- When image is clicked, take you to the url the article is referencing -->
+          <img class = "selectCard" src="./assets/images/selectSports.jpg" height="650px" width="550px">
+        </ion-card-header>
+       
+      </ion-card>
+    </ion-col>
+    <ion-col size="12" size-sm>
+      <ion-card [routerLink]="['/entertain']">
+        <ion-card-header>
+          <!-- When image is clicked, take you to the url the article is referencing -->
+          <img class = "selectCard" src="./assets/images/selectEntertain.jpg" height="650px" width="550px">
+        </ion-card-header>
+       
+      </ion-card>
+    </ion-col>
+    <ion-col size="12" size-sm>
+      <ion-card [routerLink]="['/business']">
+        <ion-card-header>
+          <!-- When image is clicked, take you to the url the article is referencing -->
+          <img class = "selectCard" src="./assets/images/selectBusiness.jpg" height="650px" width="550px">
+        </ion-card-header>
+       
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+</ion-content>
+

@@ -1,0 +1,42 @@
+<!--Tool Bar on top of screen-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Form for entering register data -->
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">First name</ion-label>
+      <!-- Saved to local storage so it can output on the home screen-->
+      <ion-input type="text" required [(ngModel)] = "firstname" name ="first" ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Last name</ion-label>
+      <ion-input type="text" required [(ngModel)] = "lastname" name ="last" ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" required [(ngModel)] = "email" name ="mail"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" required [(ngModel)] = "password" name ="pass"  ></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <!-- Sign up button click even that brings you to the home page -->
+        <ion-button type="submit" color="danger" expand="block" (click)="SaveData()" [routerLink]="['/home']">Sign Up</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
